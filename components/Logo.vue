@@ -1,8 +1,8 @@
 <template>
   <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
+    <div class="Triangle circle--two" />
+    <div class="Triangle circle--one" />
+    <div class="Triangle circle--three" />
     <div class="Triangle Triangle--four" />
   </div>
 </template>
@@ -57,6 +57,33 @@
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
   border-bottom: 60px solid #fff;
+}
+
+.circle--one {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #a5d4ad;
+}
+
+.circle--two {
+  top: 30px;
+  left: 150px;
+  animation: goright 0.5s linear forwards 3.5s;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #d5ead8;
+}
+
+.circle--three {
+  top: 60px;
+  left: 35px;
+  animation: goright 0.5s linear forwards 3.5s;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fcd7a1;
 }
 
 @keyframes turn {
