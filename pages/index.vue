@@ -43,7 +43,7 @@ export default {
   align-items: center;
   text-align: center;
   background-color: #d4ecea;
-  max-width: none;
+  max-width: 100vw;
 }
 
 .title {
