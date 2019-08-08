@@ -20,16 +20,20 @@
           GitHub
         </a>
       </div>
+      <Umbrella primary-color="#87ceeb" secondary-color="#ffa500" />
+      <Umbrella primary-color="#f0e68c" secondary-color="#fa8072" />
     </div>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Umbrella from '~/components/Umbrella.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Umbrella
   }
 }
 </script>
