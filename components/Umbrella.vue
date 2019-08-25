@@ -8,16 +8,22 @@
 <script>
 export default {
   props: {
-    primaryColor: String,
-    secondaryColor: String
+    primaryColor: {
+      type: String,
+      default: '#87ceeb'
+    },
+    secondaryColor: {
+      type: String,
+      default: '#ffa500'
+    }
   },
-  data: function () {
+  data() {
     return {
-      color: this.primaryColor || '#87ceeb'
+      color: this.primaryColor
     }
   },
   methods: {
-    changeColor: function () {
+    changeColor() {
       if (this.color === this.primaryColor) {
         this.color = this.secondaryColor
       } else {
