@@ -1,8 +1,9 @@
 <template>
-  <div
+  <img
     id="umbrella"
     :style="{ 'background-color': color }"
     @click="changeColor"
+    src="../assets/images/svg/umbrella8.svg"
   />
 </template>
 <script>
@@ -35,8 +36,8 @@ export default {
 </script>
 <style>
 #umbrella {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 .skybulue {
   background-color: #87ceeb;
