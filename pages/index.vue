@@ -19,8 +19,9 @@
           GitHub
         </a>
       </div>
-      <Umbrella primary-color="#87ceeb" secondary-color="#ffa500" />
-      <Umbrella primary-color="#f0e68c" secondary-color="#fa8072" />
+      <Umbrella primary-color="#e7d5e8" secondary-color="#fbdac8" />
+      <Umbrella primary-color="#fcd7a1" secondary-color="#ded799" />
+      <Umbrella primary-color="#a5d4ad" secondary-color="#f9c270" />
     </div>
   </div>
 </template>
