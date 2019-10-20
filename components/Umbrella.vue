@@ -2,6 +2,9 @@
   <div>
     <div v-if="umbrellaType === '8'">
       <svg
+        :class="{ hover: isHover }"
+        @mouseover="mouseover"
+        @mouseleave="mouseleave"
         id="umbrella"
         xmlns:vectornator="http://vectornator.io"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +31,9 @@
     </div>
     <div v-else-if="umbrellaType === '12'">
       <svg
+        :class="{ hover: isHover }"
+        @mouseover="mouseover"
+        @mouseleave="mouseleave"
         id="umbrella"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:vectornator="http://vectornator.io"
@@ -79,7 +85,8 @@ export default {
   },
   data() {
     return {
-      color: this.primaryColor
+      color: this.primaryColor,
+      isHover: false
     }
   },
   methods: {
@@ -89,11 +96,21 @@ export default {
       } else {
         this.color = this.primaryColor
       }
+    },
+    mouseover() {
+      this.isHover = true
+    },
+    mouseleave() {
+      this.isHover = false
     }
   }
 }
 </script>
 <style>
+.hover {
+  transform: rotate(360deg);
+  transition: 10s;
+}
 #umbrella {
   width: 120px;
   height: 120px;
