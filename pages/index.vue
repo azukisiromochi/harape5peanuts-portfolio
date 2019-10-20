@@ -22,6 +22,21 @@
       <Umbrella primary-color="#e7d5e8" secondary-color="#fbdac8" />
       <Umbrella primary-color="#fcd7a1" secondary-color="#ded799" />
       <Umbrella primary-color="#a5d4ad" secondary-color="#f9c270" />
+      <Umbrella
+        primary-color="#e7d5e8"
+        secondary-color="#fbdac8"
+        umbrella-type="12"
+      />
+      <Umbrella
+        primary-color="#fcd7a1"
+        secondary-color="#ded799"
+        umbrella-type="12"
+      />
+      <Umbrella
+        primary-color="#a5d4ad"
+        secondary-color="#f9c270"
+        umbrella-type="12"
+      />
     </div>
   </div>
 </template>
