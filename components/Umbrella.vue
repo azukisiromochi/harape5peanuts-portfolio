@@ -3,9 +3,7 @@
     <div v-if="umbrellaType === '8'">
       <svg
         class="umbrella"
-        :class="{ hover: isHover }"
-        @mouseover="mouseover"
-        @mouseleave="mouseleave"
+        :class="{ hover: isHover, rotation: isRotation, child: !isRotation }"
         xmlns:vectornator="http://vectornator.io"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
@@ -13,6 +11,8 @@
         clip-rule="evenodd"
         stroke-linecap="round"
         stroke-linejoin="round"
+        @mouseover="mouseover"
+        @mouseleave="mouseleave"
         @click="changeColor"
       >
         <g vectornator:layerName="レイヤー 1" :style="{ fill: color }">
@@ -32,9 +32,7 @@
     <div v-else-if="umbrellaType === '12'">
       <svg
         class="umbrella"
-        :class="{ hover: isHover }"
-        @mouseover="mouseover"
-        @mouseleave="mouseleave"
+        :class="{ hover: isHover, rotation: isRotation, child: !isRotation }"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:vectornator="http://vectornator.io"
         viewBox="0 0 1024 1024"
@@ -42,6 +40,8 @@
         clip-rule="evenodd"
         stroke-linecap="round"
         stroke-linejoin="round"
+        @mouseover="mouseover"
+        @mouseleave="mouseleave"
         @click="changeColor"
       >
         <g
@@ -81,6 +81,10 @@ export default {
     umbrellaType: {
       type: String,
       default: '8'
+    },
+    isRotation: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -108,14 +112,27 @@ export default {
 </script>
 <style>
 .hover {
-  transform: rotateZ(360deg);
-  transition: 5s;
+  &.rotation {
+    transform: rotateZ(360deg);
+    transition: 5s;
+  }
+  &.child {
+    transform: rotateZ(0deg);
+    transition: 5s;
+  }
 }
 .umbrella {
   width: 120px;
   height: 120px;
-  transition: all 5s linear 0s;
-  border-radius: 50%;
-  cursor: pointer;
+  &.rotation {
+    transition: all 5s linear 0s;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &.child {
+    transition: all 5s linear 0s;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 </style>
