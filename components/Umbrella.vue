@@ -2,10 +2,10 @@
   <div>
     <div v-if="umbrellaType === '8'">
       <svg
+        class="umbrella"
         :class="{ hover: isHover }"
         @mouseover="mouseover"
         @mouseleave="mouseleave"
-        id="umbrella"
         xmlns:vectornator="http://vectornator.io"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
@@ -31,10 +31,10 @@
     </div>
     <div v-else-if="umbrellaType === '12'">
       <svg
+        class="umbrella"
         :class="{ hover: isHover }"
         @mouseover="mouseover"
         @mouseleave="mouseleave"
-        id="umbrella"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:vectornator="http://vectornator.io"
         viewBox="0 0 1024 1024"
@@ -70,11 +70,11 @@
 <script>
 export default {
   props: {
-    primaryColor: {
+    pColor: {
       type: String,
       default: '#e7d5e8'
     },
-    secondaryColor: {
+    sColor: {
       type: String,
       default: '#fcd7a1'
     },
@@ -85,16 +85,16 @@ export default {
   },
   data() {
     return {
-      color: this.primaryColor,
+      color: this.pColor,
       isHover: false
     }
   },
   methods: {
     changeColor() {
-      if (this.color === this.primaryColor) {
-        this.color = this.secondaryColor
+      if (this.color === this.pColor) {
+        this.color = this.sColor
       } else {
-        this.color = this.primaryColor
+        this.color = this.pColor
       }
     },
     mouseover() {
@@ -108,11 +108,14 @@ export default {
 </script>
 <style>
 .hover {
-  transform: rotate(360deg);
-  transition: 10s;
+  transform: rotateZ(360deg);
+  transition: 5s;
 }
-#umbrella {
+.umbrella {
   width: 120px;
   height: 120px;
+  transition: all 5s linear 0s;
+  border-radius: 50%;
+  cursor: pointer;
 }
 </style>
