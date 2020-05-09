@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="umbrella">
     <div v-if="umbrellaType === '8'">
       <svg
         class="umbrella"
@@ -134,5 +134,8 @@ export default {
     border-radius: 50%;
     cursor: pointer;
   }
+}
+.umbrella {
+  padding: 1vh 5vw;
 }
 </style>

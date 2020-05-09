@@ -1,12 +1,11 @@
 <template>
   <div class="container">
-    <div>
+    <Background />
+    <Background style="flex-direction: row-reverse;" />
+    <div class="center">
       <h1 class="title">
-        portfolio
+        Portfolio
       </h1>
-      <h2 class="subtitle">
-        My lovely Nuxt.js project
-      </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
@@ -19,24 +18,16 @@
           GitHub
         </a>
       </div>
-      <div class="container">
-        <Umbrella p-color="#e7d5e8" s-color="#fbdac8" />
-        <Umbrella p-color="#fcd7a1" s-color="#ded799" />
-        <Umbrella p-color="#a5d4ad" s-color="#f9c270" />
-        <Umbrella p-color="#e7d5e8" s-color="#fbdac8" umbrella-type="12" />
-        <Umbrella p-color="#fcd7a1" s-color="#ded799" umbrella-type="12" />
-        <Umbrella p-color="#a5d4ad" s-color="#f9c270" umbrella-type="12" />
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Umbrella from '~/components/Umbrella.vue'
+import Background from '~/components/Background.vue'
 
 export default {
   components: {
-    Umbrella
+    Background
   }
 }
 </script>
@@ -51,24 +42,29 @@ export default {
   text-align: center;
   background-color: #d4ecea;
   max-width: 100vw;
+  flex-direction: column;
 }
 
+.center {
+  position: absolute;
+}
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 30px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  position: absolute;
 }
 
 .links {
